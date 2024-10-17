@@ -16,7 +16,6 @@ def consume_data(topic_name, bootstrap_servers):
                 continue
             if msg.error():
                 if msg.error().code() == KafkaException._PARTITION_EOF:
-                    # End of partition event
                     print(f"{msg.topic()} [{msg.partition()}] reached end at offset {msg.offset()}")
                 elif msg.error():
                     raise KafkaException(msg.error())
@@ -25,7 +24,6 @@ def consume_data(topic_name, bootstrap_servers):
     except KeyboardInterrupt:
         pass
     finally:
-        # Закрываем консюмера
         consumer.close()
 
 if __name__ == "__main__":
