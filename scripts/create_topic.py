@@ -19,7 +19,7 @@ def create_kafka_topic(bootstrap_servers: str, client_id: str, topic_name: str, 
     """
     try:
         admin_client = KafkaAdminClient(
-            boots ≈trap_servers=bootstrap_servers,
+            bootstrap_servers=bootstrap_servers,
             client_id=client_id
         )
         topic_list = [NewTopic(name=topic_name, num_partitions=num_partitions, replication_factor=replication_factor)]
