@@ -6,3 +6,4 @@ logs3/
 *.xml
 *.parquet
 *.csv
+new_venv

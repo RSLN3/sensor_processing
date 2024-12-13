@@ -27,6 +27,6 @@ def consume_data(topic_name, bootstrap_servers):
         consumer.close()
 
 if __name__ == "__main__":
-    topic_name = 'my_topic'
+    topic_name = 'my_topic_flink_test'
     bootstrap_servers = 'localhost:9092'
     consume_data(topic_name, bootstrap_servers)
